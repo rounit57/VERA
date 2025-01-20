@@ -5,7 +5,7 @@ from rapid_api import train_status, trainavail,pnr
 def gemini_model(prompt):
     try: 
         #print("check2")
-        Gemini_API_KEY = 'AIzaSyAZZzLtij7YfSiJNFjI5EAfdnpBYIojvGE'
+        Gemini_API_KEY = 'Gemini key'
         genai.configure(api_key=Gemini_API_KEY)
         model = genai.GenerativeModel(model_name='gemini-1.5-flash-latest')
         #print("reached model")
