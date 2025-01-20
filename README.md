@@ -1,4 +1,4 @@
-# VERA: Voice-based Railway Inquiry System
+# VERA: Voice-based Railway Enquiry System
 
 ## Overview
 VERA is an extension of [Indic-Voice-Enabled-Finance-Assistant](https://github.com/rounit57/Indic-Voice-Enabled-Finance-Assistant) , designed to provide railway inquiry services through voice-based interactions in Indian languages. It integrates REST APIs to fetch train-related data and customizes LLM responses using intent classification for improved user experience.
