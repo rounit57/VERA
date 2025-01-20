@@ -1,0 +1,33 @@
+############################################   API    ############################################
+import requests
+
+rapid_key="key"
+def pnr(pnr_num):
+     url = "https://irctc1.p.rapidapi.com/api/v3/getPNRStatus"
+     querystring = {"pnrNumber":pnr_num}
+     headers = {
+	"x-rapidapi-key": rapid_key,
+	"x-rapidapi-host": "irctc1.p.rapidapi.com"
+     }
+     response = requests.get(url, headers=headers, params=querystring)
+     return response.text
+
+def trainavail(src,dest,doj):
+     url = "https://irctc1.p.rapidapi.com/api/v3/trainBetweenStations"
+     querystring={"fromStationCode":src,"toStationCode":dest,"dateOfJourney":doj}
+     headers ={
+          "x-rapidapi-key": rapid_key,
+      	"x-rapidapi-host": "irctc1.p.rapidapi.com"
+     }
+     response = requests.get(url, headers=headers, params=querystring)
+     return response
+
+def train_status(trainno):
+     url="https://irctc1.p.rapidapi.com/api/v1/liveTrainStatus"
+     querystring={"trainNo":trainno}
+     headers={
+          "x-rapidapi-key": rapid_key,
+     	"x-rapidapi-host": "irctc1.p.rapidapi.com"
+     }
+     response = requests.get(url, headers=headers, params=querystring)
+     return response
